@@ -4,17 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/main.css" rel="stylesheet">"
+    <link href="/css/reset.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
   </head>
   <body>
     <div id="header">
-      <h1>Thank you for comming!!</h1>
+      <p class="header">Thank you for comming!</p>
     </div>
      <div id="main">
-      <%= @bag['message']['name'] %> 様
-      <%= @bag['message']['message'] %>
+       <div id="name">
+         <%= @bag['message']['name'] %> 様
+       </div>
+       <div id="message">
+         <%= @bag['message']['message'] %>
+       </div>
     </div>
     <div id="footer">
+      <p class="footer">平成24年9月27日　野神 康正・真帆</p>
     </div>
   </body>
 </html>
