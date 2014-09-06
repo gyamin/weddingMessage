@@ -3,6 +3,9 @@ require 'sinatra'
 require 'sinatra/reloader'
 require_relative './model/message.rb'
 
+# production環境設定
+set :environment, :production
+
 get '/message/name/:name' do
     @bag = {}
     @bag['name'] = params['name'];
