@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>QRCode一覧</title>
+  </head>
+  <body>
+    <table>
+      <% @bag.each.with_index(1) do |row, index| %>
+        <tr>
+          <td>
+            <p class="name"><%= row['name'] %> 様 </p>
+            <p class="alert">
+              スマートフォンなどでQRコードを読み取り、URLをブラウザで開いてください。 <br>
+              携帯の方は表示が崩れる場合があります。 <br>
+              表示には通信費用が必要です。パケット定額制などを利用していない方は、ご注意ください。
+            </P>
+          </td>
+          <td><img src="<%= row['name'] %>.png " width=120 height=120></td>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+  
+  <style>
+    .name {
+      font-size: 170%;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+     .alert {
+      font-size: 50%;
+      text-align: left;
+      margin-left: 20px;
+    }
+    table, td{
+      border-width: 1px 0px; /* 上下だけ引く */
+      border-color: black;
+      border-style: solid; /* 線種：実線 */
+      border-collapse: collapse;
+    }
+    table {
+      border-width: 1px 1px;
+      border-color: black;
+      border-style: solid;
+      border-collapse: collapse;
+    }
+    
+    .break { 
+      page-break-before: always; 
+    }
+  </style>
+</html>
