@@ -40,3 +40,4 @@ build/
 .rbenv-gemsets
 .ruby-version
 Gemfile.lock
+qrcode/image/
